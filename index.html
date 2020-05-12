@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    
+    <title>Validação de e-mail</title>
+</head>
+<body>
+    <section>
+       
+      
+
+    </section>
+    
+    <footer>
+        <form name="emailUser" method="POST" action="/index.html">
+            <div>
+                <input class="form" name="email" type="email" placeholder="Coloque seu e-mail para contato :)" />
+            </div>
+            
+        </form>
+        <button type="submit" onclick='send()'>ENVIAR</button>
+       
+    </footer>
+    
+        <script>
+
+
+
+function send(){
+        var textInput = document.getElementsByClassName('form')[0].value
+        function emailValido(email){
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+        }
+        if(emailValido && (textInput.indexOf('gmail') != -1)){
+            alert("Email aceito / provedor gmail")
+        }
+        if(emailValido && (textInput.indexOf('outlook') != -1)){
+            alert("Email aceito / provedor outlook")
+        }
+        if(emailValido && (textInput.indexOf('hotmail') != -1)){
+            alert("Email aceito / provedor hotmail")
+        }
+       else{
+           alert('email inválido')
+       }
+
+       
+   
+     
+}
+       
+        </script>
+        
+</body>
+</html>
